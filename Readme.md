@@ -55,11 +55,11 @@ To localize, we need to know the exact position of the bot. For this purpose, We
 However this are the vehicle or chassis (to be precise) velocities and not the velocity in global frame. hence for control loop :
 
 * Find error (in x, y and theta) in global frame
-:point_right: the /odom topic is giving present pose of the robot in global frame
-:point_right: the desired pose is declared above and defined already in global frame therefore calculate error in global frame
+  * :point_right: the /odom topic is giving present pose of the robot in global frame
+  * :point_right: the desired pose is declared above and defined already in global frame therefore calculate error in global frame
 
 * Calculate error in body frame
-:point_right: Controller outputs robot velocity in robot_body frame,i.e. velocity are define is in x, y of the robot frame and the direction of z axis says the same in global and body frame therefore the errors will have to be calculated in body frame.
+  * :point_right: Controller outputs robot velocity in robot_body frame,i.e. velocity are define is in x, y of the robot frame and the direction of z axis says the same in global and body frame therefore the errors will have to be calculated in body frame.
 
 * Finally implement P controllers
 to react to the error in robot_body frame
@@ -74,9 +74,9 @@ Note : THis code was modified to handle a sequence of desired poses and goal pos
 
 This task was the repetition of task 1 but ...
 * more realistic localisation:
-    * specifically: using Overhead camera and Aruco Marker instead of simulator transforms
+    * **specifically: using Overhead camera and Aruco Marker instead of simulator transforms**
 * more realistic model of the holonomic drive.
-    * specifically: three omni wheel robot with input (v1, v2, v3) for three wheel velocities instead of any generic holonomic drive robot with inputs (Vx, Vy, W)
+    * **specifically: three omni wheel robot with input (v1, v2, v3) for three wheel velocities instead of any generic holonomic drive robot with inputs (Vx, Vy, W)**
 
 
 ## Approach
@@ -86,8 +86,8 @@ Instead of using odom sensor to get the position of the bot, overhead camera was
 
 ### Part B: Inverse Kinematics
 Same as task 1 , the difference is:
-* pose is given in pixels and radians (instead of meters and radians) by subscribing to the *detected_aruco topic (NOTE: feedback python file publishes to this topic)
-* one Matrix Multiplication was implemented for inverse kinematics i.e. find three omni-wheel velocities (v1, v2, v3) given velocity of the chassis (Vx, Vy, W) 
+* **pose is given in pixels and radians** (instead of meters and radians) by subscribing to the *detected_aruco topic (NOTE: feedback python file publishes to this topic)
+* **one Matrix Multiplication was implemented** for inverse kinematics i.e. find three omni-wheel velocities (v1, v2, v3) given velocity of the chassis (Vx, Vy, W) 
 
 
 ## Simulation Result
