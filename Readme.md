@@ -5,7 +5,7 @@
 - [About the Project](#about-the-project)
   - [Tech Stack](#tech-stack)
 - [Task 0](#task-0)
--  [Task 1](#task1)
+-  [Task 1](#task-1)
 -  [Task 2](#task-2)
 -  [Simulation Result](#simulation-result)
 
@@ -33,6 +33,7 @@ Initially making it(turtle) rotate circularly, with only velocities to control w
 
 ## Result 
 
+![zero](https://github.com/ChinmayMundane/-HolA-Bot/assets/109454803/fc1e4dce-844f-44b5-8f8e-4a875e7eafe0)
 
 
 # Task 1 
@@ -90,5 +91,10 @@ Same as task 1 , the difference is:
 
 
 ## Simulation Result
+This video shows localistion to some of the waypoints feeded by the user
+
+
+https://github.com/ChinmayMundane/-HolA-Bot/assets/109454803/43eea231-99bf-47cd-8e3f-aa0df354079f
+
 
 
